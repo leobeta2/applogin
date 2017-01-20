@@ -11,13 +11,16 @@
       <div class="header clearfix">
         <nav>
           <ul class="nav nav-pills pull-right">
-            <li role="presentation" class="active"><a href="/">Dashboards</a></li>
+            {{#if user}}
+            <li role="presentation" class="active"><a href="/">Home</a></li>
+            <li role="presentation"><a href="/users/logout">Logout</a></li>
+            {{else}}
             <li role="presentation"><a href="/users/login">Login</a></li>
             <li role="presentation"><a href="/users/register">Register</a></li>
-            <li role="presentation"><a href="/users/logout">Logout</a></li>
+            {{/if}}
           </ul>
         </nav>
-        <h3 class="text-muted">Primer Login</h3>
+        <img src="/img/opt_logo.png" alt="logoOptimisa">
       </div>
 
 
@@ -40,7 +43,7 @@
       </div>
 
       <footer class="footer">
-        <p>&copy; 2016 LoginApp, Inc.</p>
+        <p>&copy; 2017 LeonVidal, Inc.</p>
       </footer>
 
     </div> <!-- /container -->
